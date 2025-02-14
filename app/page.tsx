@@ -12,8 +12,8 @@ Amplify.configure(outputs);
 
 const client = generateClient<Schema>();
 
-const { signOut } = useAuthenticator();
 export default function App() {
+  const { signOut } = useAuthenticator();
   const [todos, setTodos] = useState<Array<Schema["Todo"]["type"]>>([]);
 
   function listTodos() {
@@ -47,7 +47,7 @@ export default function App() {
         <a href="https://docs.amplify.aws/nextjs/start/quickstart/nextjs-app-router-client-components/">
           Review next steps of this tutorial.
         </a>
-      </div>{" "}
+      </div>
       <button onClick={signOut}>Sign out</button>
     </main>
   );
